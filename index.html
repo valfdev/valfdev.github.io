@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Учу жавасрипт</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<div class='f'>
+		<input id='int'/>
+		<button id="show">Показать</button>
+	</div>
+	<div class="chels"><text class="chel"></text></div>
+	<script>
+		var w, a, inte = 0;
+		$('#show').on('click', function(){
+			inte = parseInt($('#int').val());
+			w = "";
+			a = 1;
+			while(a <= inte){
+				w = w+"1";
+				a++;
+			}
+			$(".chel").html(w);
+		});
+	</script>
+</body>
+</html>

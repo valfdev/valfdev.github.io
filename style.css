@@ -1,0 +1,19 @@
+body{
+	margin: 0;
+	overflow-wrap: normal;  /* не поддерживает IE, Firefox; является копией word-wrap */ 
+  word-wrap: normal;
+  word-break: normal;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */ 
+  line-break: auto;  /* нет поддержки для русского языка */ 
+  hyphens: manual;  /* значение auto не поддерживается Chrome */ 
+}
+#menu{
+	width: 100vw;
+	height: 300px;
+	position: fixed;
+	background: red;
+}
+.chels{
+	width: 100vw;
+	height: auto;
+	hyphens: manual; 
+}
