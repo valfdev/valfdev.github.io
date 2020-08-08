@@ -1,0 +1,74 @@
+body{
+	background-color: #F3F3F3;
+	margin: 0;
+	
+}
+
+nav{
+	position: fixed;
+	display: block;
+	width: 100vw;
+	height: 80px;
+	background: #F8FDFF;
+	box-shadow: 0 0 5px 0px gray;
+	z-index: 1000;
+}
+nav #links{
+	float: right;
+	width: 60%;
+	height: 80px;
+	display: inline-block;
+	margin-top: 0;	
+	margin-right: 30px;
+	left: 30px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	
+}
+#links li{
+	display: inline-flex;
+	height: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	float: right;
+	margin-left: 5px;
+	transition: 0.5s;
+	
+}
+#links li a{
+	margin: auto;
+	color: #192132;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 15px;
+	transition: 0.2s;
+}
+#links li:hover{
+	border-bottom: 2px #1F52F4 solid;
+	height: 78px;
+}
+#links li:hover a{
+	color: #1F52F4;
+}
+#logo{
+	display: inline-block;
+	max-width: 15%;
+	height: 80px;
+	margin-top: 0;
+	float: left;
+}
+#logo li{
+	height: 80px;
+	display: inline-flex;
+}
+#logo li img{
+	display: block;
+	margin: auto;
+	height: 55%;
+}
+.center-block{
+	height: 200px;
+	width: auto;
+}
+.carousel-caption h3{
+	background: #125BDC;
+}
