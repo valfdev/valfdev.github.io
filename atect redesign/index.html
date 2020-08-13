@@ -19,6 +19,23 @@
 </head>
 
 <body>
+	
+	<script>
+		$('#mnu').fadeToggle(0);
+		var menuopen = 0;
+		$('#open-mobile-menu').on('click', function(){
+			$('#mnu').fadeToggle(300);
+		});
+	</script>
+	<div id="mobile-nav">
+		<button id="open-mobile-menu"><i id="open-mobile-menu-i" class="fas fa-align-justify"></i></button>
+		<ul id='mnu'>
+			<a><li><text>Главная</text></li></a>
+			<a><li><text>Донат</text></li></a>
+			<a><li><text>Правила</text></li></a>
+			<a><li><text>Форум</text></li></a>
+		</ul>
+	</div>
 	<nav>
 		<ul>
 			<a><li><text>Главная</text></li></a>
