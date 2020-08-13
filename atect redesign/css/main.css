@@ -335,3 +335,6 @@ nav ul li text{
 .navs h1 b{
 	color: #F18C1A;
 }
+#mobile-nav{
+	display: none;
+}
