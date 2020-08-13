@@ -1,0 +1,222 @@
+@media screen and (max-width: 980px) {
+	header #main #right{
+		width: 100%;
+		float: right;
+		height: 100vh;
+		display: inline-table;
+	}
+	header #main #left{
+		width: 0%;
+		float: left;
+		height: 100vh;
+		display: none;
+	}
+	#store #right{
+		width: 100%;
+		margin-top: 25vh;
+		height: 50vh;
+		display: none;
+	}
+	#store #left{
+		width: 100vw;
+		margin-top: 25vh;
+		height: 50vh;
+		display: block;
+	}
+	#mobile-store-button{
+		display: block;
+		width: 100%;
+		color: #E7E7E7;
+	}
+	#mobile-store-button-tag{
+		display: block;
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border: #E7E7E7 2px solid;
+		color: #E7E7E7;
+		font-size: 2.6vw;
+	}
+	#good{
+		width: 100%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		height: auto;
+		margin-top: 3px;
+		background: whitesmoke;
+		border: none;
+		color: #2B2B2B;
+		font-size: 2.6vw;
+	}
+	#payment-form #ok{
+		margin-top: 10px;
+		width: 100%;
+		font-size: 2.6vw;
+	}
+	#rules-text{
+		width: 70%;
+		padding-left: 15%;
+		padding-right: 15%;
+		font-size: 2.6vw;
+	}
+	#social-icons{
+		width: 40%;
+		padding-left: 30%;
+		padding-right: 30%;
+		font-size: 3vh;
+	}
+	#social-icons li{
+		display: inline-block;
+		text-decoration: none;
+		margin: auto;
+		width: 95px;
+		height: 95px;
+		font-size: 22px;
+	}
+	#main-text{
+		width: 100%;
+		text-align: center;
+		font-size: 3.5vh;
+	}
+	#main-text b{
+		color: #EC9F0F;
+	}
+	#submain-text{
+		width: 60%;
+		padding-left: 20%;
+		padding-right: 20%;
+		text-align: center;
+		margin-top: -20px;
+		font-size: 1.6vh;
+	}
+	#store{
+		width: 100vw;
+		height: 100vh;
+		background-image: url(../images/background_store.png);
+		background-size: cover;
+
+	}
+	#store-title{
+		padding-left: 13vw;
+		text-align: left;
+		color: #EC9F0F;
+		padding-top: 7vh;
+		margin-top: 0;
+		font-size: 70px;
+	}
+	#store #left{
+		width: 100%;
+		display: table;
+		float: left;
+		height: auto;
+	}
+	#store #left .align{
+		height: auto;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#left form{
+		display: block;
+		width: 80%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	#store #right{
+		width: 100%;
+		display: none;
+		float: right;
+		height: auto;
+	}
+	#store #right .align{
+		height: auto;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#left .align{
+		height: auto;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#payment-form .store_tip{
+		width: 100%;
+		height: auto;
+		color: #EC9F0F;
+		font-size: 28px;
+	}
+	#payment-form input{
+		width: 70%;
+		padding-left: 15%;
+		padding-right: 15%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: auto;
+		margin-top: 3px;
+		background: whitesmoke;
+		border: none;
+		border: #1A1A1A 0.5px solid;
+		color: #2B2B2B;
+		font-size: 26px;
+	}
+	#payment-form input::-moz-placeholder { color: #2B2B2B; }
+	#payment-form input::-webkit-input-placeholder  { color: #2B2B2B; }
+	#payment-form select{
+		width: 80%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		height: auto;
+		margin-top: 3px;
+		background: whitesmoke;
+		border: none;
+		color: #2B2B2B;
+		font-size: 26px;
+	}
+	#payment-form #ok{
+		background: none;
+		color: #EC9F0F;
+		border: 2px #EC9F0F solid;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		transition: 0.5s;
+		font-size: 26px;
+	}
+
+	.onstore-button{
+		width: 50%;
+		margin-left: 12%;
+		border: #D5D5D5 2px solid;
+		color: #D0D0D0;
+	}
+	.store-window-button{
+		background: none;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 7px;
+		padding-bottom: 7px;	
+	}
+	.store-window #text{
+		width: 60%;
+		padding-left: 20%;
+		padding-right: 20%;
+		height: auto;
+	}
+	#mobile-store-button{
+		display: none;
+	}
+	#rules-text{
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.navs{
+		display: none;
+	}
+}
