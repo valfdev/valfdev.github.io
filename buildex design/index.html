@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BuildEX</title>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="Intro.otf" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2f96d16423.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<div id="right">
+			<div class='align'>
+				<div id='right-center'>
+					<h1 id="we">CREATIVE</h1>
+					<script>
+						var i=0, we=['CREATIVE', 'SKYBLOCK', 'BUILDBATTLE', 'WORLDEDIT', 'LEVELING'], max=5;
+						window.setInterval(function(){
+							if(i>max){
+								i=0;
+							}
+							$('#we').slideToggle(200);
+							window.setTimeout(function(){
+								$('#we').html(we[i]);
+								i = i+1;
+								$('#we').slideToggle(200);
+							}, 300);
+							
+						}, 3500);
+					</script>
+				</div>
+			</div>
+		</div>
+		<div id="left">
+			<div class='align'>
+				<div id='left-center'>
+					<h1>BUILDEX
+					<p>Сервер для игроков, а не для донатов</p>
+					</h1>
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class='us'>
+		<h1 id='us-title'>НАШИ ОСОБЕННОСТИ</h1>
+		<center>
+		<div id='o1' class='row'>
+			<div class='icon'>
+				<i class="fas fa-american-sign-language-interpreting"></i>
+			</div>
+			<div class='text'>
+				<h3><b>Добрая администрация</b> <p>Наша администрация не даст вам заскучать и поможет по первому запросу</p></h3>
+			</div>
+		</div>
+		<div id='o2' class='row'>
+			<div class='icon'>
+				<i class="fas fa-th-large"></i>
+			</div>
+			<div class='text'>
+				<h3><b>Большие плоты</b> <p>Не ограничиваем вашу фантазию, даем вам плоты с размером 256x256</p></h3>
+			</div>
+		</div>
+		<div id='o3' class='row'>
+			<div class='icon'>
+				<i class="fas fa-bolt"></i>
+			</div>
+			<div class='text'>
+				<h3><b>Мощное оборудование</b> <p>Наше мощное оборудование служит гарантом комфортной игры для вас</p></h3>
+			</div>
+		</div>
+		<div id='o4' class='row'>
+			<div class='icon'>
+				<i class="fas fa-cubes"></i>
+			</div>
+			<div class='text'>
+				<h3><b>WorldEdit бесплатно</b> <p>Команды для WorldEdit доступны всем игрокам</p></h3>
+			</div>
+		</div>
+		<div id='o5' class='row'>
+			<div class='icon'>
+				<i class="fas fa-star-half-alt"></i>
+			</div>
+			<div class='text'>
+				<h3><b>Уровни и система рейтинга</b> <p>Уникальная система уровней и рейтинга, подарки самым активным</p></h3>
+			</div>
+		</div>
+		<div id='o6' class='row'>
+			<div class='icon'>
+				<i class="fas fa-cog"></i>
+			</div>
+			<div class='text'>
+				<h3><b>Самописные системы</b> <p>Мы стараемся не искать готовые плагины, мы делаем их сами</p></h3>
+			</div>
+		</div>
+		</center>
+		<script>
+			ScrollReveal().reveal('#o1', { delay: 1000 });
+			ScrollReveal().reveal('#o2', { delay: 1120 });
+			ScrollReveal().reveal('#o3', { delay: 1230 });
+			ScrollReveal().reveal('#o4', { delay: 1340 });
+			ScrollReveal().reveal('#o5', { delay: 1450 });
+			ScrollReveal().reveal('#o6', { delay: 1560 });
+			ScrollReveal().reveal('#o7', { delay: 1670 });
+		</script>
+	</div>
+	<script>
+		$('body').fadeOut(0);
+		$('body').fadeIn(2000);
+	</script>
+</body>
+</html>
