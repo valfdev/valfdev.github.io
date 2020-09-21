@@ -3,6 +3,9 @@
 	    src: local("Intro"), /* проверяем наличие шрифта в ОС пользователя */
          url(../Intro.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
   }
+a{
+	text-decoration: none;
+}
 body{
 	background: #d6e1fe;
 	margin: 0;
@@ -274,6 +277,16 @@ header .align{
 	margin: auto;
 	display: block;
 }
+@media screen and (max-width: 660px) {
+	#right-center h1{
+		display: block;
+		margin: auto;
+		font-size: 2vh;
+		color: #6948ED;
+		font-weight: 900;
+		font-family: 'Raleway', sans-serif;
+	}
+}
 @media screen and (max-width: 991px) {
 	#joinus{
 		width: 100vw;
@@ -371,7 +384,135 @@ header .align{
 	}
 	#left-center h1{
 		margin: auto;
-		font-size: 11vh;
+		font-size: 10vh;
+		background: rgb(61,9,121);
+		background: linear-gradient(77deg, rgba(61,9,121,1) 0%, rgba(0,69,255,1) 100%);
+		text-transform: uppercase;
+		  -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: 'Intro', sans-serif;
+	}
+}
+@media screen only and (max-width: 1024px) {
+	.us{
+		height: 122vh;
+	}
+	.us .row{
+		width: 43%;
+		height: 32%;
+		background: rgba(244,249,255,0.09);
+		padding: 1%;
+		border-radius: 10px;
+		display: inline-block;
+		margin-top: 40px;
+		margin: 3%;
+		margin-top: 10px;
+		
+	}
+	.us .row .icon i{
+		margin: auto;
+		font-size: 46px;
+		color: #3c2bde;
+	}
+}
+@media screen only and (max-width: 1366px) {
+	#joinus{
+		width: 100vw;
+		height: 50%;
+		float: left;
+	}
+	#helpus text{
+		display: block;
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	#helptext h2{
+		font-size: 40px;
+	}
+	#helptext p{
+		font-size: 30px;
+	}
+	#helpus{
+		width: 100vw;
+		height: 50%;
+		float: left;
+	}
+	.us .row{
+		width: 42%;
+		height: 22%;
+		background: rgba(244,249,255,0.09);
+		padding: 1%;
+		border-radius: 10px;
+		display: inline-block;
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 40px;
+		margin: 3%;
+		margin-top: 10px;
+		
+	}
+	.us .row .icon{
+		width: 30%;
+		height: 100%;
+		display: inline-flex;
+		float: left;
+	}
+	.us .row .icon i{
+		margin: auto;
+		font-size: 65px;
+		color: #3c2bde;
+	}
+	.us .row .text{
+		width: 69%;
+		height: 100%;
+		display: inline-flex;
+		float: right;
+		font-size: 25px;
+	}
+	.us .row .text h3{
+		margin: auto;
+		font-family: 'Raleway', sans-serif;
+	}
+	.us .row .text h3 b{
+		font-size: 28px;
+		color: #1046f8;
+		font-weight: 700;
+		text-align: left;
+		float: left;
+	}
+	.us .row .text h3 p{
+		color: rgba(23,23,23,1.00);
+		font-weight: 500;
+		text-align: left;
+		display: block;
+		width: 100%;
+		float: left;
+		font-size: 21px;
+		margin-top: 2;
+		color: rgba(71,71,71,1.00);
+	}
+	header #left{
+		width: 100vw;
+		height: 50vh;
+		float: left;
+	}
+	header #right{
+		width: 100vw;
+		height: 50vh;
+		float: left;
+	}
+	#right-center h1{
+		display: block;
+		margin: auto;
+		font-size: 7vh;
+		color: #6948ED;
+		font-weight: 900;
+		font-family: 'Raleway', sans-serif;
+	}
+	#left-center h1{
+		margin: auto;
+		font-size: 10vh;
 		background: rgb(61,9,121);
 		background: linear-gradient(77deg, rgba(61,9,121,1) 0%, rgba(0,69,255,1) 100%);
 		text-transform: uppercase;
