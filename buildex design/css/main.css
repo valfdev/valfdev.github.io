@@ -1,7 +1,7 @@
 @font-face {
-	    font-family: 'Intro';
-	    src: local("Intro"),
-         url(../Intro.otf);
+	    font-family: 'Intro'; /* имя шрифта для CSS правил */
+	    src: local("Intro"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../Intro.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
   }
 body{
 	background: #d6e1fe;
@@ -86,7 +86,7 @@ header .align{
 }
 .us .row{
 	width: 25%;
-	height: 19%;
+	height: 22%;
 	background: rgba(244,249,255,0.09);
 	padding: 1%;
 	border-radius: 10px;
@@ -94,6 +94,8 @@ header .align{
 	margin-left: 40px;
 	margin-right: 40px;
 	margin-top: 40px;
+	margin: 3%;
+	margin-top: 8vh;
 }
 .us .row .icon{
 	width: 30%;
@@ -130,7 +132,7 @@ header .align{
 	display: block;
 	width: 100%;
 	float: left;
-	margin-top: -1px;
+	margin-top: 0;
 }
 #us-title{
 	display: block;
