@@ -7,19 +7,35 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;900&display=swap" rel="stylesheet">
 	<link href="Intro.otf" rel="stylesheet">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  	/>
 	<script src="https://kit.fontawesome.com/2f96d16423.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
+		
+		<div id="left">
+			<div class='align'>
+				<div id='left-center'>
+					<h1 class="animate__animated animate__bounceInDown animate__delay-1s">BUILDEX
+					<p>Сервер для игроков, а не для донатов</p>
+					</h1>
+					
+				</div>
+			</div>
+		</div>
 		<div id="right">
 			<div class='align'>
 				<div id='right-center'>
 					<h1 id="we">CREATIVE</h1>
 					<script>
-						var i=0, we=['CREATIVE', 'SKYBLOCK', 'BUILDBATTLE', 'WORLDEDIT', 'LEVELING'], max=5;
+						var i=0, we=['LEVELING', 'SKYBLOCK', 'BUILDBATTLE', 'WORLDEDIT', 'CREATIVE'], max=5;
 						window.setInterval(function(){
-							if(i>max){
+							if(i>max-1){
 								i=0;
 							}
 							$('#we').slideToggle(200);
@@ -31,16 +47,6 @@
 							
 						}, 3500);
 					</script>
-				</div>
-			</div>
-		</div>
-		<div id="left">
-			<div class='align'>
-				<div id='left-center'>
-					<h1>BUILDEX
-					<p>Сервер для игроков, а не для донатов</p>
-					</h1>
-					
 				</div>
 			</div>
 		</div>
@@ -106,6 +112,47 @@
 			ScrollReveal().reveal('#o6', { delay: 1560 });
 			ScrollReveal().reveal('#o7', { delay: 1670 });
 		</script>
+	</div>
+	<div id="prefooter">
+		<div id='helpus'>
+			<text id='helptext'>
+				<h2>Пожертвования на развитие сервера!</h2>
+				<p>Ежемесячно мы тратим около 700 российских рублей на оборудование для сервера. Эти деньги мы берем из своего кармана, но ты можешь помочь нам. Если хочешь помочь, переходи по ссылке <i class="fas fa-hand-holding-usd"></i> и помоги серверу копеечкой.</p>
+			</text>
+		</div>
+		<div id='joinus'>
+			<div class='window'>
+				<div class='social-links'>
+					<center>
+					<div class='link'>
+						<i class="fab fa-discord"></i>
+					</div>
+					<div class='link'>
+						<i class="fab fa-vk"></i>
+					</div>
+					<div class='link'>
+						<i class="fas fa-hand-holding-usd"></i>
+					</div>
+					</center>
+				</div>
+				<h1 id="joinus-title">Заходи к нам на сервер!</h1>
+				<p id="ip" style="display: none;">127.0.0.1:25565</p>
+				<button id="copy" onclick="copytext('#ip')">КОПИРОВАТЬ IP</button>
+				
+				<script>
+					function copytext(el) {
+						var $tmp = $("<textarea>");
+						$("body").append($tmp);
+						$tmp.val($(el).text()).select();
+						document.execCommand("copy");
+						$tmp.remove();
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+	<div id='footer'>
+			<a href="https://vk.com/valfdev"><img id="valfdev" src="valfdev.png"/></a>
 	</div>
 	<script>
 		$('body').fadeOut(0);
