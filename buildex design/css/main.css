@@ -1,6 +1,7 @@
 @font-face {
-    font-family: Intro; /* Гарнитура шрифта */
-    src: url(Intro.otf); /* Путь к файлу со шрифтом */
+	    font-family: 'Intro';
+	    src: local("Intro"),
+         url(../Intro.otf);
   }
 body{
 	background: #d6e1fe;
