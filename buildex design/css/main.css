@@ -5,6 +5,7 @@ body{
 	background-image: url(../background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+	overflow-x: hidden;
 }
 header{
 	wdith: 100vw;
@@ -50,11 +51,11 @@ header .align{
 	font-size: 2vh;
 	width: 100%;
 	text-align: center;
-	margin-top: -20px;
+	margin-top: -18px;
 	background: rgba(34,34,34,1.00);
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
-	font-weight: 600;
+	font-weight: 300;
 	color: rgba(34,34,34,1.00);
 	
 }
@@ -70,17 +71,18 @@ header .align{
 	margin: auto;
 	font-size: 11vh;
 	color: #9fb9fb;
+	font-weight: 900;
 }
 .us{
-	width: 98vw;
+	width: 99vw;
 	height: 100vh;
 	float: left;
+	background: rgba(244,244,244,0.45);
 }
 .us .row{
-	width: 320px;
-	height: 100px;
-	background: rgba(244,249,255,0.19);
-	box-shadow: 0 0 30px 0px RGB(0,0,0,0.2);
+	width: 25%;
+	height: 19%;
+	background: rgba(244,249,255,0.09);
 	padding: 1%;
 	border-radius: 10px;
 	display: inline-block;
@@ -136,4 +138,5 @@ header .align{
 	text-align: center;
 	font-size: 60px;
 	font-family: 'Intro', sans-serif;
+	margin: none;
 }
