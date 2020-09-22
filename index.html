@@ -21,9 +21,13 @@
 	<script>
 		window.setTimeout(function(){
 			$('.loader').animate({"opacity":"0"}, 1500);
+			$('header').css({"opacity":"0", "left":"-1000"});
 			window.setTimeout(function(){
 				$('.loader').css({"display":"none"});
 			}, 1550);
+			window.setTimeout(function(){
+				$('header').animate({"opacity":"1"},2000);
+			}, 1600);
 		}, 5000);
 	</script>
 	<header>
@@ -33,10 +37,10 @@
 			</div>
 			<div id="social-side">
 				<div class='icons'>
-					<i style="color:rgba(40,81,237,1.00);" class="fab fa-vk"></i>
-					<i style="color:rgba(59,131,243,1.00);" class="fab fa-telegram-plane"></i>
-					<i style="color:rgba(16,173,44,1.00);" class="fab fa-spotify"></i>
-					<i style="color:rgba(88,96,143,1.00);" class="fab fa-discord"></i>
+					<a href="https://vk.com/valfdev"><i style="color:rgba(40,81,237,1.00);" class="fab fa-vk"></i></a>
+					<a href="https://t.me/oldpotato"><i style="color:rgba(59,131,243,1.00);" class="fab fa-telegram-plane"></i></a>
+					<a href="https://open.spotify.com/user/2r7os9m4mgt4472mkaegyji9s?si=p3wonialTte_HFUDeCaCAQ"><i style="color:rgba(16,173,44,1.00);" class="fab fa-spotify"></i></a>
+					<a href="https://discord.com/users/363686924600344577"><i style="color:rgba(88,96,143,1.00);" class="fab fa-discord"></i></a>
 				</div>
 				<h1>SOCIAL LINKS</h1>
 			</div>
