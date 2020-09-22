@@ -23,7 +23,6 @@ a:hover{
 	display: flex;
 	margin: 0;
 	z-index: 999;
-	top: -80px;
 }
 #loader-logo{
 	margin: auto;
@@ -35,7 +34,7 @@ header{
 	display: block;
 	width: 100vw;
 	height: 100vh;;
-	margin-top: 80px;
+	padding-top: 80px;
 }
 #head-right{
 	display: inline-block;
