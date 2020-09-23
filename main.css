@@ -475,14 +475,6 @@ header{
 		margin-top: -150px;
 	}
 }
-@media only screen and (min-device-width: 1080px) and (max-device-width: 2340px) and (orientation: landscape){
-	#social-side .icons{
-		width: 56%;
-		padding-left: 22%;
-		padding-right: 22%;
-		margin-top: -80px;
-	}
-}
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) and (orientation: portrait){
 	#head-right{
 		width: 100vw;
