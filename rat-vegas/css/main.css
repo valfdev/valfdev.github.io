@@ -256,3 +256,10 @@ header #white{
 	position: relative;
 	font-size: 30%;
 }
+.main-image img{
+	width: 30vw;
+	height: 30vw;
+	margin: auto;
+	position: relative;
+	font-size: 30%;
+}
