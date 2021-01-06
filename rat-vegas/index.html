@@ -10,9 +10,15 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.pagepiling.js"></script>
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
 </head>
 
 <body>
+	<script>
+		$(document).ready(function() {
+			$('#pagepiling').pagepiling();
+		});
+	</script>
 	<div id="pagepiling">
 		<div class="section">
 			<header>
@@ -120,13 +126,5 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	<script>
-		$(document).ready(function() {
-			$('#pagepiling').pagepiling();
-		});
-	</script>
 </body>
 </html>
