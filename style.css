@@ -1,19 +1,54 @@
 body{
-	margin: 0;
-	overflow-wrap: normal;  /* не поддерживает IE, Firefox; является копией word-wrap */ 
-  word-wrap: normal;
-  word-break: normal;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */ 
-  line-break: auto;  /* нет поддержки для русского языка */ 
-  hyphens: manual;  /* значение auto не поддерживается Chrome */ 
+	background: black;
+	color: #FFFFFF;
+	font-family: 'Ubuntu Mono', monospace;
+	overflow-x: hidden;
 }
-#menu{
-	width: 100vw;
-	height: 300px;
-	position: fixed;
-	background: red;
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
-.chels{
-	width: 100vw;
-	height: auto;
-	hyphens: manual; 
+header{
+	width: 60vw;
+	padding: 0vw 20vw;
+	font-size: 0.7vw;
+}
+header h1,h2{
+	display: inline-block;
+}
+header b{
+	display: inline-block;
+	float: right;
+	font-size: 0.8vw;
+}
+#console{
+	width: 60vw;
+	padding: 0vw 20vw;
+	font-size: 1.2vw;
+	overflow-y: scroll;
+	height: 80vh;
+}
+#separator{
+	color: #D30D11;
+}
+#commandfield{
+	width: 60vw;
+	padding: 0vw 20vw;
+	font-size: 1.2vw;
+	display: block;
+}
+#forrm b,input{
+	display: inline-block;
+}
+#command{
+	width: 100%;
+	background: black;
+	border: none;
+	color: white;
+}
+.green{
+	color: #17D81B;
+}
+.logo{
+	font-size: 0.4vw;
 }
