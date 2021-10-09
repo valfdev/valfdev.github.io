@@ -3,6 +3,20 @@
 		font-family: "Aeroport";
 		overflow-x: hidden;
 	}
+
+	.loading{
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		background: rgba(231,231,231,0.95);
+		display: flex;
+	}
+	.loading img{
+		margin: auto;
+		width: 10vw;
+		height: 10vw;
+	}
+
 	header{
 		min-width: 80vw;
 		height: 100vh;
@@ -122,8 +136,12 @@
 		height: auto;
 		background-size: cover;
 		padding: 15vw 10vw;
+		display: flex;
 	}
-
+	.whyus .align{
+		margin: auto;
+		width: 100%;
+	}
 	.whyus h2{
 		font-size: 2.2vw;
 		margin-top: 8.8vw;
