@@ -1,247 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Valfdev.github.io</title>	
-	<link type="text/css" rel="stylesheet" href="style.css"/>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<title>Zamorozka 2.0</title>
+	<link type="text/css" rel="stylesheet" href="style/main.css"/>
+	<link type="text/css" rel="stylesheet" href="style/font.css"/>
+	<script type="text/javascript" src="js/detectmobile.js"></script>
+	<script type="text/javascript" src="js/anchors.js"></script>
+	<script src="js/anime.min.js"></script>
 </head>
+
 <body>
-	<div>
-		<header><h1>valfdev.github.io</h1> <h2>/etc/TerminalApp</h2><b id='separator'>Uncrypted ⚠</b>
-		<script>
-		var count = 0;
-		var separator = document.getElementById('separator');
-		window.setInterval(function(){
-								if(count < 10){
-									if(separator.innerHTML != ""){
-										separator.innerHTML = "";
-									} else {
-										separator.innerHTML = "Uncrypted ⚠";
-										count = count+1;
-									}
-								} else {
-									separator.innerHTML = "<b style='color: green'>Connected to crypt server ✔</b>";
-								}
-							}, 500);	
-		</script>
-		</header>
-		<div id="console">
-			<p>Connecting to valfdev.github.io</p>
-			<script>
-				function getRandomInt(max) {
-				  return Math.floor(Math.random() * max);
-				}
-				window.setTimeout(function(){
-					var console = document.getElementById('console');
-					console.innerHTML = console.innerHTML+"<p>Username: valfdev</p>" 
-					console.innerHTML = console.innerHTML+"<p>Password: ***********</p>" 
-					window.setTimeout(function(){
-						console.innerHTML = console.innerHTML+"<p>OS: Ubuntu User: valfdev Timeout: "+getRandomInt(500)+" MS</p>"
-						console.innerHTML = console.innerHTML+"<p>Please, wait....</p>" 
-						window.setTimeout(function(){
-							console.innerHTML = console.innerHTML+"<p>Succesful connect: "+getRandomInt(3)+" seconds.</p>"
-							console.innerHTML = console.innerHTML+"<p>Welcome back, valfdev.</p> <p>Ubuntu OS 20.04 | Last session: Today, at 6:59 AM, user: valfdev, IP: %i.%i.%i.%i Location: NaN</p>" 
-							document.getElementById('commandfield').innerHTML = "<form id='forrm' onsubmit='btnClick(); return false;'><input autofocus id='command' autocomplete='off' type='text'></input> <input id='cmdsmbt' type='submit' style='position: absolute; left: -9999px; width: 1px; height: 1px;' tabindex='-1' /></form>";
-						}, getRandomInt(10000));
-					}, getRandomInt(5000));
-				}, getRandomInt(3000));
-				function btnClick() {
-					checkCommands(document.getElementById('command').value);
-				}
-				var folder = "/";
-				function checkCommands(command){
-					var args = command.split(' ');
-					if(args.length > 0){
-						if(args[0] == "apt" || args[0] == "apt-get"){
-							answer("/etc/apt.sh: No access");
-							
-						} else if (args[0] == "sudo"){
-							answer("/etc/sudo.sh: You are not a root user");
-						} else if (args[0] == "help" || args[0] == "help.sh"){
-							answer("/help.sh: Help page");
-							answer("apt - Apps managment");
-							answer("ls - Get folders and files list");
-							answer("sudo - Send commands as root");
-							answer("cd - Change directory");
-							answer("rm - Remove files");
-						} else if (args[0] == "ls"){
-							if(folder == "/"){
-								answer("/ Folder")
-								answer("/etc/")
-								answer("/var/")
-								answer("/os/")
-								answer("valfdev.dat")
-								answer("service.sh")
-								answer("help.sh")
-								answer("welcome.sh")
-							} else if (folder == "/etc/"){
-								answer("/etc/ Folder")
-								answer("/sudo.sh")
-								answer("/apt.sh")
-								answer("/cd.sh")
-								answer("/ls.sh")
-								answer("/ls.sh")
-								answer("/apache2.sh")
-								answer("/python.sh")
-							} else if (folder == "/var/"){
-								answer("/var/ Folder")
-								answer("/var/root/")
-								answer("/var/valfdev/")
-							} else if (folder == "/var/root/"){
-								answer("/var/root/ Folder")
-								answer("/destroy.sh")
-							} else if (folder == "/var/valfdev/"){
-								answer("/var/valfdev/ Folder")
-								answer("/readme.txt")
-							}
-						} else if (args[0] == "destroy.sh"){
-							if(folder == "/var/root/"){
-								document.getElementById('console').innerHTML = "OS error: System file services.dat not found";
-								answer("||||||||||||||||||||||||||||||||||||")
-								answer("Nastya Danger was here")
-								answer("||||||||||||||||||||||||||||||||||||")
-								window.setInterval(function(){
-									var randomColor = Math.floor(Math.random()*16777215).toString(16);
-									document.body.style.backgroundColor = "#" + randomColor;
-								}, 50);
-								answer("/var/valfdev/.Security/service.sh: Please, reboot. After rebooting, the system will be restored.")
-								document.getElementById('commandfield').innerHTML = "";
-							} else {
-								answer("File not found")
-							}
-						} else if (args[0] == "service.sh"){
-							if(folder == "/"){
-								answer("valfdev.github.io service. Status: <text class='green'>Operational (12 MS)</text>")
-							} else {
-								answer("File not found")
-							}
-						} else if (args[0] == "sudo.sh" || args[0] == "ls.sh" || args[0] == "cd.sh" || args[0] == "apache2.sh" || args[0] == "python.sh" || args[0] == "apt.sh"){
-							if(folder == "/etc/"){
-								answer("You cannot use these files.")
-							} else {
-								answer("File not found")
-							}
-						} else if (args[0] == "cd"){
-							if(args.length > 1){
-								if(args[1] == "var" || args[1] == "/var" || args[1] == "/var/"){
-									if(folder == "/"){
-										folder = "/var/"
-										answer("Directory: /var/")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "etc" || args[1] == "/etc" || args[1] == "/etc/"){
-									if(folder == "/"){
-										folder = "/etc/"
-										answer("Directory: /etc/")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "root" || args[1] == "/root/" || args[1] == "/root"){
-									if(folder == "/var/"){
-										folder = "/var/root/"
-										answer("Directory: /var/root/")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "valfdev" || args[1] == "/valfdev/" || args[1] == "/valfdev"){
-									if(folder == "/var/"){
-										folder = "/var/valfdev/"
-										answer("Directory: /var/valfdev/")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "os" || args[1] == "/os/" || args[1] == "/os"){
-									if(folder == "/"){
-										answer("No permissions")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "/var/root/" || args[1] == "/var/root"){
-									if(folder == "/"){
-										folder = "/var/root/"
-										answer("Directory: /var/root/")
-									} else {
-										answer("No such directory.")
-									}
-								} else if (args[1] == "/var/valfdev" || args[1] == "/var/valfdev"){
-									if(folder == "/"){
-										folder = "/var/valfdev/"
-										answer("Directory: /var/valfdev/")
-									} else {
-										answer("No such directory.")
-									}
-								} else {
-									answer("No such directory.")
-								}
-							} else {
-								answer("Directory: /")
-								folder = "/"
-							}
-						} else if (args[0] == "rm"){
-							if(args.length > 1){
-								if(args.length > 2){
-									if(args[1] == "-f" && args[2] == "/*"){
-										answer("Successful. 1242 files removed.")
-										window.setTimeout(function(){
-											document.body.innerHTML = "No connection...";
-										}, 200);
-									}
-								} else {
-									answer("No access")
-								}
-								
-							} else {
-								answer("rm %file")
-							} 
-						} else if(args[0] == "python"){
-							if(args.length > 1){
-								if(args[1] == "-v"){
-									answer("Python 3.6.5 (v3.6.5:f59c0932b4), Mar 28 2018")
-								}
-							} else {
-								answer("/etc/python.sh: No access")
-							}
-						} else if(args[0] == "apache2"){
-							answer("/etc/apache2.sh: The apache HTTP Server")
-							answer("Status: <text class='green'>Active</text>")
-						} else if(args[0] == "welcome.sh") {
-							if(folder = "/"){
-								answer("<text class='green'>Tg: @valfdev</text>")
-								answer("I want чокопайку")
-							} else {
-								answer("No command or shell script found")
-							}
-						} else if(args[0] == "./pidoras"){
-							document.body.innerHTML = "<img style='width: 100vw; height: 100vh;' src='nepthune.jpg'/>"
-						} else {
-							answer("No command or shell script found");
-						}
-					}
-				}
-				function answer(text){
-					var console = document.getElementById('console');
-					console.innerHTML = console.innerHTML+"<p>"+text+"</p>";
-					var objDiv = document.getElementById("console");
-					objDiv.scrollTop = objDiv.scrollHeight;
-					document.getElementById('command').value = "";
-				}
-				Array.prototype.contains = function(obj) {
-					var i = this.length;
-					while (i--) {
-						if (this[i] === obj) {
-							return true;
-						}
-					}
-					return false;
-				}
-			</script>
-			
+	<div class='loading'>
+		<img alt='Loading...' src="images/loading.gif"/>
+	</div>
+	<script>
+		var loading = true;
+		window.addEventListener('scroll', function(){
+			if(loading) window.scrollTo(0, 0);
+		});
+		
+		window.addEventListener('load', function(){
+			loading = false;
+			anime({
+			  targets: '.loading',
+			  opacity: 0,
+			  display: 'none'
+			});
+		});
+	</script>
+	<header>
+		<div class='left'>
+			<div class='align'>
+				<h1>ZAMOROZKA</h1>
+				<h2>MINECRAFT ЧИТ-КЛИЕНТ 1.8-1.16.5</h2>
+				<p>Zamorozka — чит-клиент, созданный разработчиками из СНГ,
+				ориентированный на качество и производительность.
+				Каждая функция гарантированно сделана на совесть
+				и с любовью опытными разработчиками.</p>
+				<div class='footer'>
+					<a class='button' href='#items'>Скачать</a> <div class='socials'><a><img src="images/vk.svg"alt='vk'/></a> <a style="margin-left: 1.6vw;"><img src="images/discord.svg"alt='discord'/></a></div>
+				</div>
+			</div>
 		</div>
-		<div id='commandfield'> </div>
+		<div class='right'>
+			<div class='align'>
+				<iframe src="https://www.youtube.com/embed/rLXtmJdlsH4?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p>Обзор на чит-клиент Zamorozka 2.0</p>
+			</div>
+		</div>
+	</header>
+	<div class='whyus'>
+		<div class='align'><h2>ПОЧЕМУ МЫ?</h2>
+		<div class='content'>
+			<div class='row'>
+				<div class='left'>
+					<b>1</b>
+				</div>
+				<div class='right'>
+					<div class='align'>
+						<h3>Простота и удобство</h3>
+						<p>Крайне простой и удобный интерфейс, интутивно понятный каждый каждому пользователю. Все функции находятся на своих местах 
+						и могут быть настроены в соотвествии со вкусами игрока.</p>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='left'>
+					<b>2</b>
+				</div>
+				<div class='right'>
+					<div class='align'>
+						<h3>Обильный функционал</h3>
+						<p>Огромное количество необходимых модулей, которых нет во многих других клиентах-аналогах. Революционные функции, после использования которых, вы навсегда забудете прежнюю игру.</p>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='left'>
+					<b>3</b>
+				</div>
+				<div class='right'>
+					<div class='align'>
+						<h3>Надёжность</h3>
+						<p>Любая функция при должной настройке обойдёт любую анти-чит систему.
+ 						На данный момент клиент сфокусирован на обходах для: Matrix, AAC, NCP, WatchDog. Мы гарантируем безопасность игры на серверах с вышепречисленными античитами</p>
+					</div>
+				</div>
+			</div>
+		</div></div>
+	</div>
+	<div class='reviews'>
+		<h2>Отзывы о клиенте</h2>
+		<div class='row'>
+			<div class='header'>
+				<div class='left'>
+					<div style='background-image: url("https://cdnn21.img.ria.ru/images/07e5/09/17/1751457504_0:0:3021:1699_1920x0_80_0_0_d011c281a6bdedd08631248d54d09910.jpg")' class='avatar'>
+					</div>
+					<div class='text'>
+						<b>Владимир путин</b>
+						<img class='stars' src='images/stars.png' alt='stars'/>
+					</div>
+				</div>
+				<div class='right'>
+					<h2>Отзыв о заморозке</h2>
+				</div>
+			</div>
+			<div class='body'>
+				<text>“Клиент прикольный. Но я зашел на свой любимый сервер санрайз мси вы знаете я президент я мало понимаю в технологиях и у меня крашнуло за античит и тогда я обиделся.  Разработчик в целом приятный человек но ему пришлось извеняться на камеру. Но в целом 4 звезды”</text>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='header'>
+				<div class='left'>
+					<div style='background-image: url("https://cdnn21.img.ria.ru/images/07e5/09/17/1751457504_0:0:3021:1699_1920x0_80_0_0_d011c281a6bdedd08631248d54d09910.jpg")' class='avatar'>
+					</div>
+					<div class='text'>
+						<b>Вильгельм II</b>
+						<img class='stars' src='images/stars.png' alt='stars'/>
+					</div>
+				</div>
+				<div class='right'>
+					<h2>Как я начал первую мировую</h2>
+				</div>
+			</div>
+			<div class='body'>
+				<text>“Скачал чит заморозка. Понравился купил всей своей армии. Выносили советскую россию всей армией. Но потом они тоже купили заморозку и началось хвх короче я проебал. Одна звезда нахуй”</text>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='header'>
+				<div class='left'>
+					<div style='background-image: url("https://cdnn21.img.ria.ru/images/07e5/09/17/1751457504_0:0:3021:1699_1920x0_80_0_0_d011c281a6bdedd08631248d54d09910.jpg")' class='avatar'>
+					</div>
+					<div class='text'>
+						<b>Владимир путин</b>
+						<img class='stars' src='images/stars.png' alt='stars'/>
+					</div>
+				</div>
+				<div class='right'>
+					<h2>Отзыв о заморозке</h2>
+				</div>
+			</div>
+			<div class='body'>
+				<text>“Клиент прикольный. Но я зашел на свой любимый сервер санрайз мси вы знаете я президент я мало понимаю в технологиях и у меня крашнуло за античит и тогда я обиделся.  Разработчик в целом приятный человек но ему пришлось извеняться на камеру. Но в целом 4 звезды”</text>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='header'>
+				<div class='left'>
+					<div style='background-image: url("https://cdnn21.img.ria.ru/images/07e5/09/17/1751457504_0:0:3021:1699_1920x0_80_0_0_d011c281a6bdedd08631248d54d09910.jpg")' class='avatar'>
+					</div>
+					<div class='text'>
+						<b>Владимир путин</b>
+						<img class='stars' src='images/stars.png' alt='stars'/>
+					</div>
+				</div>
+				<div class='right'>
+					<h2>Отзыв о заморозке</h2>
+				</div>
+			</div>
+			<div class='body'>
+				<text>“Клиент прикольный. Но я зашел на свой любимый сервер санрайз мси вы знаете я президент я мало понимаю в технологиях и у меня крашнуло за античит и тогда я обиделся.  Разработчик в целом приятный человек но ему пришлось извеняться на камеру. Но в целом 4 звезды”</text>
+			</div>
+		</div>
+	</div>
+	<div class='items'>
+		<div class='row'>
+			<h3>FREE</h3>
+			<text class='price'>0 Р/<text class='mini'>месяц</text></text>
+			<div class='tags'>
+				<div class='tag'><img src='images/user.svg'/>239</div>
+			</div>
+			
+			<div class='align'><div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Категории Render и Hud</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Надёжные KillAura и Velocity</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Быстрый и сильный Spammer</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Удобный, легитный AimAssist</text>
+			</div></div>
+			
+			<a class='button' href='#download'>Скачать</a>
+		</div>
+		
+		<div class='row'>
+			<h3>FULL</h3>
+			<text class='price'>от 14 Р</text>
+			<div class='tags'>
+				<div class='tag'><img src='images/user.svg'/>239</div>
+			</div>
+			
+			<div class='align'><div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Разблокированы все модули</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Доступ к Scripting-API</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Доступ к Client ViaVersion</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Частые обновления клиента</text>
+			</div>
+			
+			</div>
+			
+			<a class='button' href='#download'>Купить</a>
+		</div>
+		
+		<div class='row'>
+			<h3>LIFETIME</h3>
+			<text class='price'>1250 Р/<text class='mini'>месяц</text></text>
+			<div class='tags'>
+				<div class='tag'><img src='images/user.svg'/>239</div>
+			</div>
+			
+			<div class='align'><div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Разблокированы все модули</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Приоритетная тех. поддержка</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Доступ к Scripting-API</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Доступ к Client ViaVersion</text>
+			</div>
+			
+			<div class='wurow'>
+				<img src='images/yes.svg'/>
+				<text>Бесплатный плащ</text>
+			</div></div>
+			
+			<a class='button' href='#download'>Купить</a>
+		</div>
+		
 	</div>
 </body>
 </html>
