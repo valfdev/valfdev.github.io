@@ -7,10 +7,28 @@
 	<link type="text/css" rel="stylesheet" href="style/font.css"/>
 	<script type="text/javascript" src="js/detectmobile.js"></script>
 	<script type="text/javascript" src="js/anchors.js"></script>
+	<script src="js/anime.min.js"></script>
 </head>
 
 <body>
-	
+	<div class='loading'>
+		<img alt='Loading...' src="images/loading.gif"/>
+	</div>
+	<script>
+		var loading = true;
+		window.addEventListener('scroll', function(){
+			if(loading) window.scrollTo(0, 0);
+		});
+		
+		window.addEventListener('load', function(){
+			loading = false;
+			anime({
+			  targets: '.loading',
+			  opacity: 0,
+			  display: 'none'
+			});
+		});
+	</script>
 	<header>
 		<div class='left'>
 			<div class='align'>
@@ -33,7 +51,7 @@
 		</div>
 	</header>
 	<div class='whyus'>
-		<h2>ПОЧЕМУ МЫ?</h2>
+		<div class='align'><h2>ПОЧЕМУ МЫ?</h2>
 		<div class='content'>
 			<div class='row'>
 				<div class='left'>
@@ -70,7 +88,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div></div>
 	</div>
 	<div class='reviews'>
 		<h2>Отзывы о клиенте</h2>
