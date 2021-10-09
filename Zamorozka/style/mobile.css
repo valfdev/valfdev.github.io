@@ -1,64 +1,60 @@
-@media (max-width: 1000px){
-	html,body{
+@media screen and (min-width: 650px){
+	body{
 		margin: 0;
 		font-family: "Aeroport";
-		width: 200vw;
-	}
-	h1,h2,h3,h4,h5,div,p{
-		margin: 0;
+		overflow-x: hidden;
 	}
 	header{
-		width: 100%;
-		height: 120vh;
+		min-width: 100vw;
+		height: 100vw;
 		background: url("../images/background.jpg");
 		background-size: cover;
-		display: block;
+		padding: 0vw 10vw;
 	}
 
 	header .left{
 		display: inline-flex;
 		float: left;
-		width: 70vw;
-		height: 120vh;
+		width: 37vw;
+		height: 100vh;
 		color: white;
 	}
 
 	.left .align{
 		display: block;
-		width: 100%;
+		min-width: 100%;
 		margin: auto;
 	}
 
 	header .left h1{
 		color: white;
-		font-size: 9.4vw;
+		font-size: 2.4vw;
 	}
 
 	header .left h2{
 		color: white;
 		font-weight: 400;
-		font-size: 4vw;
-		margin-top: 5vw;
+		font-size: 1.8vw;
 	}
 
 	header .left p{
 		color: white;
 		font-weight: 200;
-		margin-top: 5vw;
-		font-size: 4vw;
+		margin-top: 2vw;
+		font-size: 1.2vw;
 		opacity: 0.8;
 	}
 
 	header .left .footer{
-		margin-top: 10vw;
+		margin-top: 4vw;
 	}
 
 	header .left .footer .button{
-		padding: 2.2vw 5vw;
+		padding: 0.8vw 1.8vw;
 		background: #1F1F1F;
 		color: white;
-		border-radius: 1.4vw;
-		font-size: 4vw;
+		border-radius: 0.4vw;
+		font-size: 1.2vw;
 		font-weight: 300;
 		box-shadow: 0px 0.05vw 1.5vw rgba(0, 0, 0, 0.46);
 		float: left;
@@ -76,16 +72,16 @@
 
 	header .left .footer .socials a{
 		display: inline-flex;
-		width: 10vw;
-		height: 10vw;
+		width: 3.4vw;
+		height: 3.4vw;
 		background: rgba(255, 255, 255, 0.03);
 		box-shadow: 0px 0px 1.5vw rgba(64, 116, 221, 0.47);
 		border-radius: 0.4vw;
 		transition: 0.4s;
 	}
 	header .left .footer .socials img{
-		width: 4vw;
-		height: 4vw;
+		width: 1.8vw;
+		height: 1.8vw;
 		margin: auto;
 	}
 
@@ -94,7 +90,7 @@
 	}
 
 	header .right{
-		display: none;
+		display: inline-flex;
 		float: right;
 		width: 37vw;
 		height: 100vh;
@@ -123,14 +119,14 @@
 
 
 	.whyus{
-		width: 120vw;
-		height: auto;
+		min-width: 100vw;
+		height: 100vh;
 		background-size: cover;
-		padding: 20vw 10vw;
+		padding: 0vw 10vw;
 	}
 
 	.whyus h2{
-		font-size: 7.2vw;
+		font-size: 2.2vw;
 		margin-top: 8.8vw;
 	}
 	.whyus .content{
@@ -141,10 +137,9 @@
 		flex-wrap: wrap;
 	}
 	.whyus .content .row{
-		width: 100%;
-		min-height: 22vw;
-		height: auto;
-		margin-top: 22.4vw;
+		width: 50%;
+		height: 12vw;
+		margin-top: 5.4vw;
 	}
 	.whyus .content .left{
 		width: 20%;
@@ -152,20 +147,20 @@
 	}
 
 	.whyus .content .left b{
-		font-size: 24.2vw;
+		font-size: 9.2vw;
 		color: #7CA4F7;
 		opacity: 0.3;
 		align-content: flex-start;
 	}
 
 	.whyus .content .right h3{
-		font-size: 4vw;
+		font-size: 1.4vw;
 		color: #6396F7;
 	}
 
 	.whyus .content .right p{
 		margin-top: 0.6vw;
-		font-size: 4vw;
+		font-size: 1vw;
 		color: #757575;
 	}
 
@@ -184,54 +179,53 @@
 
 
 	.items{
-		width: 140vw;
-		height: 380vh;
+		min-width: 100vw;
+		height: auto;
 		background-size: cover;
 		display: flex;
-		height: auto;
-		flex-direction: column;
+		height: 52vw;
+		flex-direction: row;
 		padding: 10vw 0;
 	}
 
 	.items .row{
-		width: 80vw;
-		padding: 12vw 16vw;
+		width: 28vw;
+		padding: 4vw 3vw;
 		background: #FFFFFF;
-		border: 0.4vw solid #B5CDFB;
+		border: 1px solid #B5CDFB;
 		box-sizing: border-box;
-		border-radius: 1vw;
+		border-radius: 12px;
 		margin-left: auto;
 		margin-right: auto;
-		min-height: 140vw;
+		height: 50vw;
 		display: flex;
 		flex-direction: column;
-		margin-top: 14vw;
 	}
 
 	.items .row h3{
 		display: block;
 		text-align: center;
-		font-size: 7.2vw;
+		font-size: 2.2vw;
 		width: 100%;
 	}
 	.items .row .price{
 		display: block;
 		width: 100%;
 		text-align: center;
-		font-size: 5.6vw;
+		font-size: 1.6vw;
 		font-weight: 500;
 		margin-top: 1vw;
 	}
 	.items .row .price .mini{
-		font-size: 4.2vw;
+		font-size: 1.2vw;
 	}
 	.items .row .tag{
+		min-width: 3vw;
+		max-width: 5vw;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0.5vw 0.6vw;
 		text-align: center;
-		font-size: 4.2vw;
-		max-width: 20vw;
 		color: #A3A3A3;
 		align-items: center;
 		background: rgba(20, 20, 20, 0.11);
@@ -265,8 +259,8 @@
 		margin-top: 1vw;
 	}
 	.items .row .tag img{
-		width: 3vw;
-		height: 3vw;
+		width: 1vw;
+		height: 1vw;
 	}
 	.items .row .align{
 		margin-top: 4.4vw;
@@ -274,14 +268,13 @@
 	.items .row .wurow{
 		display: flex;
 		width: 100%;
-		margin-top: 4.2vw;
+		margin-top: 1.2vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.items .row .wurow text{
 		width: 86%;
 		padding-left: 4%;
-		font-size: 4vw;
 	}
 	.items .row .wurow img{
 		width: 10%;
@@ -292,13 +285,12 @@
 	.items .row .button{
 		background: #6396F7;
 		color: white;
-		padding: 2vw 3.6vw;
-		border-radius: 2.3vw;
-		box-shadow: 0px 0.04vw 3.4vw rgba(0, 0, 0, 0.16);
+		padding: 0.6vw 1.6vw;
+		border-radius: 0.3vw;
+		box-shadow: 0px 0.04vw 1.4vw rgba(0, 0, 0, 0.16);
 		margin: auto;
 		margin-bottom: 0;
 		transition: 0.4s;
-		font-size: 4.2vw;
 	}
 
 	.items .row .button:hover{
@@ -311,19 +303,19 @@
 		margin-bottom: 0;
 	}
 	.reviews{
-		width: 120vw;
+		min-width: 100vw;
 		padding: 5vw 10vw;
 		background: white;
 		box-shadow: 0px 0px 12vw rgba(0, 0, 0, 0.08);
 	}
 	.reviews h2{
-		width: 100%;
+		width: 40%;
 		padding-right: 60%;
-		font-size: 4vw;
+		font-size: 2.8vw;
 	}
 	.reviews .row{
-		width: 120vw;
-		padding: 10vw 15vw;
+		width: 80vw;
+		padding: 5vw 4vw;
 		background: #FFFFFF;
 		border: 0.05vw solid #D5D5D5;
 		box-sizing: border-box;
@@ -334,16 +326,16 @@
 
 	.reviews .row .header{
 		width: 100%;
-		height: 12vw;
+		height: 3vw;
 	}
 	.reviews .row .header .left{
 		float: left;
-		width: 80vw;
+		width: 20vw;
 		display: flex;
 	}
 	.reviews .row .header .avatar{
-		width: 9vw;
-		height: 9vw;
+		width: 3vw;
+		height: 3vw;
 		background: #DDDDDD;
 		display: inline-block;
 		border-radius: 100vw;
@@ -351,30 +343,29 @@
 		background-position: center;
 	}
 	.reviews .row .header .left .text{
-		width: 30vw;
-		padding-left: 5vw;
+		width: 17vw;
+		padding-left: 1vw;
 		height: 3vw;
-		font-size: 4vw;
 		display: inline-flex;
 		flex-wrap: wrap;
+		font-size: 1.2vw;
 	}
 	.reviews .row .header .left .text b{
 		font-weight: 500;
 		display: block;
 		width: 100%;
-		font-size: 3vw;
+		font-size: 1.2vw;
 	}
 
 	.reviews .row .header .left .text .stars{
 		font-weight: 500;
 		display: block;
-		width: 17vw;
-		height: 3.4vw;
+		width: 8.7vw;
+		height: 1.4vw;
 	}
 	.reviews .row .header .right{
 		width: 60vw;
 		height: 3vw;
-		display: none;
 	}
 	.reviews .row .header .right h2{
 		display: block;
@@ -394,6 +385,6 @@
 		text-align: left;
 		color: #393939;
 		font-weight: normal;
-		font-size: 3.2vw;
+		font-size: 1.2vw;
 	}
 }
