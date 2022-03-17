@@ -1,0 +1,91 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background: #101010;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a{
+    color: rgba(255, 255, 255, 0.53);
+    text-decoration: none;
+}
+nav.active{
+    background: #101010;
+}
+nav.active ul{
+    border: none;
+}
+nav.active ul li{
+    opacity: 0.3;
+}
+nav{
+    width: 80vw;
+    padding: 0.6vw 10vw;
+    position: fixed;
+    transition: 0.6s;
+}
+nav ul{
+    display: flex;
+    border-left: 2px #ff723a solid;
+    border-right: 2px #ff723a solid;
+    transition: 0.6s;
+}
+nav ul li{
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1.2vw;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+nav ul li a{
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.73);
+    display: inline-block;
+    margin-left: 1.2vw;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #ff723a;
+    text-shadow: 0 0 1.4vw #ff723a;
+}
+
+.content{
+    width: 80vw;
+    padding: 10vw 10vw;
+}
+.content h2{
+    color: white;
+    font-size: 3.2vw;
+    padding: 0.2em 1.4em;
+    border-left: 0.15em #ff723a solid;
+    background: rgba(194, 194, 194, 0.007);
+}
+.content .image{
+    width: 80%;
+    padding: 1.2vw 10%;
+}
+.content .image img{
+    width: 100%;
+    height: auto;
+}
+.content .image p{
+    margin-top: 2.4vw;
+    color: white;
+    font-size: 1vw;
+    padding: 0.6vw 2.4vw;
+    border-left: 0.15em #ff723a solid;
+    background: rgba(194, 194, 194, 0.007);
+}
+.content p{
+    display: block;
+    max-width: 90%;
+    color: #c2c2c2;
+    font-size: 1.6vw;
+    line-height: 2em;
+    padding: 0.6vw 2.4vw;
+}
